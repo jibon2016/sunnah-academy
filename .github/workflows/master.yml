@@ -23,7 +23,7 @@ jobs:
     - name: 📂 Sync files in jibon
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftp.jibon.dev
+        server: 103.7.4.120
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
         server-dir: /sunnah-academy.jibon.dev/
