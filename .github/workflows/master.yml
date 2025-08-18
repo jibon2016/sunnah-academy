@@ -21,7 +21,7 @@ jobs:
       run: npm run build
 
     - name: 📂 Sync files in jibon
-      uses: SamKirkland/FTP-Deploy-Action@v4.0.0
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.jibon.dev
         username: ${{ secrets.ftp_username }}
