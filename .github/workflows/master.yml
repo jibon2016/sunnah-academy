@@ -26,4 +26,4 @@ jobs:
         server: ftp.jibon.dev
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /sunnah.jibon.dev/
+        server-dir: sunnah.jibon.dev/
