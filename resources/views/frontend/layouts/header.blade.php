@@ -1,4 +1,4 @@
-      
+
       <!-- Topbar start -->
         <div class="container-fluid fixed-top">
             <div class="container topbar d-none d-lg-block" style="background-color:aliceblue;" >
@@ -21,7 +21,7 @@
                                 <a class="text-dark px-2" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="text-dark px-2" href=""><i class="fab fa-linkedin-in"></i></a>
                                 <a class="text-dark px-2" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="text-body ps-4" href=""><i class="fa fa-lock text-dark me-1"></i> Signup/login</a>
+                                <a class="text-body ps-4" href="{{ route('login') }}"><i class="fa fa-lock text-dark me-1"></i> Signup/login</a>
                             </div>
                         </div>
                     </div>
@@ -29,9 +29,7 @@
             </div>
             <div class="container">
                 <nav class="navbar navbar-light navbar-expand-lg py-3">
-                    <a href="index.html" class="navbar-brand">
-                        <h1 class="mb-0">Sunnah <span class="text-primary"> Academy</span> </h1>
-                    </a>
+                    <x-application-logo/>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars text-primary"></span>
                     </button>

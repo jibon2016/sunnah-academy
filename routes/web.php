@@ -5,20 +5,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('frontend.home.index');
-});
-
-Route::get('/admin', function (){
-   return view('backend.dashboard');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->name('home');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // All Admin Route
+    Route::middleware(['isAdmin'])->prefix('admin')->group(function () {
+
+
+    });
+
+    //All user Route
+    Route::get('/dashboard', function () {
+        return view('backend.dashboard');
+    })->name('dashboard');
+
 });
 
 require __DIR__.'/auth.php';
