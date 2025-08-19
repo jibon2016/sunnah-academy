@@ -1,870 +1,632 @@
 @extends('backend.layouts.app')
+@section('title', 'Dashboard ')
 @section('content')
-<main class="page-content">     
-        <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-4">
-          <div class="col">
-            <div class="card radius-10">
-              <div class="card-body">
-                  <div class="d-flex align-items-center">
-                      <div>
-                          <p class="mb-0 text-secondary">Total Orders</p>
-                          <h4 class="my-1">4805</h4>
-                          <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> 5% from last week</p>
-                      </div>
-                      <div class="widget-icon-large bg-gradient-purple text-white ms-auto"><i class="bi bi-basket2-fill"></i>
-                      </div>
-                  </div>
-              </div>
-            </div>
-           </div>
-           <div class="col">
-              <div class="card radius-10">
-                <div class="card-body">
-                    <div class="d-flex align-items-center">
-                        <div>
-                            <p class="mb-0 text-secondary">Total Revenue</p>
-                            <h4 class="my-1">$24K</h4>
-                            <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> 4.6 from last week</p>
-                        </div>
-                        <div class="widget-icon-large bg-gradient-success text-white ms-auto"><i class="bi bi-currency-exchange"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-           </div>
-           <div class="col">
-            <div class="card radius-10">
-              <div class="card-body">
-                  <div class="d-flex align-items-center">
-                      <div>
-                          <p class="mb-0 text-secondary">Total Customers</p>
-                          <h4 class="my-1">5.8K</h4>
-                          <p class="mb-0 font-13 text-danger"><i class="bi bi-caret-down-fill"></i> 2.7 from last week</p>
-                      </div>
-                      <div class="widget-icon-large bg-gradient-danger text-white ms-auto"><i class="bi bi-people-fill"></i>
-                      </div>
-                  </div>
-              </div>
-           </div>
-           </div>
-           <div class="col">
-            <div class="card radius-10">
-              <div class="card-body">
-                  <div class="d-flex align-items-center">
-                      <div>
-                          <p class="mb-0 text-secondary">Bounce Rate</p>
-                          <h4 class="my-1">38.15%</h4>
-                          <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> 12.2% from last week</p>
-                      </div>
-                      <div class="widget-icon-large bg-gradient-info text-white ms-auto"><i class="bi bi-bar-chart-line-fill"></i>
-                      </div>
-                  </div>
-              </div>
-            </div>
-           </div>
-        </div><!--end row-->
+    <div class="container">
+        <div class="page-inner">
+            <div
+                class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4"
+            >
+                <div class="">
+                    <p>
+                        পদত্যাগের চিঠিতে হাসানুল বান্না লিখেছেন, ‘আমি বেশ কিছুদিন ধরে জন্ডিস/ লিভারজনিত রোগে আক্রান্ত হয়ে নিজ বাসায় চিকিৎসা নিচ্ছিলাম। আমার শারীরিক অবস্থার উন্নতি না হওয়ার কারণে আপনার (চিফ প্রসিকিউটর) অফিসে যোগদান করতে পারছি না। আমার চিকিৎসার জন্য আরও সময় লাগবে। এমতাবস্থায় আমি আমার শারীরিক অসুস্থতার কারণে প্রসিকিউটর পদ থেকে পদত্যাগপূর্বক অব্যাহতি প্রার্থনা করছি।’
 
-
-        <div class="row">
-          <div class="col-12 col-lg-8 col-xl-8 d-flex">
-            <div class="card radius-10 w-100">
-              <div class="card-body">
-                 <div class="row row-cols-1 row-cols-lg-2 g-3 align-items-center">
-                    <div class="col">
-                      <h5 class="mb-0">Sales Figures</h5>
-                    </div>
-                    <div class="col">
-                      <div class="d-flex align-items-center justify-content-sm-end gap-3 cursor-pointer">
-                         <div class="font-13"><i class="bi bi-circle-fill text-primary"></i><span class="ms-2">Sales</span></div>
-                         <div class="font-13"><i class="bi bi-circle-fill text-success"></i><span class="ms-2">Orders</span></div>
-                      </div>
-                    </div>
-                 </div>
-                 <div id="chart1"></div>
-              </div>
+                        প্রসিকিউটর মোনাওয়ার হুসাইন সাংবাদিকদের বলেছেন, চিফ প্রসিকিউটর তাঁর আবেদন মঞ্জুর করে মন্ত্রণালয়ে পাঠিয়েছেন। তিনি দীর্ঘদিন ধরে জন্ডিস ও যকৃতের অসুখে ভুগছেন। নিয়োগের পর মাত্র কয়েক দিন অফিস করার পরই তাঁর শরীরে এই জটিল রোগ ধরা পড়ে। এর পর থেকেই তিনি ছুটিতে ছিলেন।
+                    </p>
+                </div>
+                <div>
+                    <h3 class="fw-bold mb-3">Dashboard</h3>
+                    <h6 class="op-7 mb-2">Free Bootstrap 5 Admin Dashboard</h6>
+                </div>
+                <div class="ms-md-auto py-2 py-md-0">
+                    <a href="#" class="btn btn-label-info btn-round me-2">Manage</a>
+                    <a href="#" class="btn btn-primary btn-round">Add Customer</a>
+                </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-4 col-xl-4 d-flex">
-            <div class="card radius-10 w-100">
-              <div class="card-header bg-transparent">
-                <div class="row g-3 align-items-center">
-                  <div class="col">
-                    <h5 class="mb-0">Statistics</h5>
-                  </div>
-                  <div class="col">
-                    <div class="d-flex align-items-center justify-content-end gap-3 cursor-pointer">
-                      <div class="dropdown">
-                        <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-dots-horizontal-rounded font-22 text-option"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="javascript:;">Action</a>
-                          </li>
-                          <li><a class="dropdown-item" href="javascript:;">Another action</a>
-                          </li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="javascript:;">Something else here</a>
-                          </li>
-                        </ul>
-                      </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-stats card-round">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-icon">
+                                    <div
+                                        class="icon-big text-center icon-primary bubble-shadow-small"
+                                    >
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                </div>
+                                <div class="col col-stats ms-3 ms-sm-0">
+                                    <div class="numbers">
+                                        <p class="card-category">Visitors</p>
+                                        <h4 class="card-title">1,294</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                 </div>
-              </div>
-              <div class="card-body">
-                <div id="chart2"></div>
-              </div>
-              <ul class="list-group list-group-flush mb-0">
-                <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent">New Orders<span class="badge bg-primary badge-pill">25%</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent">Completed<span class="badge bg-orange badge-pill">65%</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent">Pending<span class="badge bg-success badge-pill">10%</span>
-                </li>
-              </ul>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-stats card-round">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-icon">
+                                    <div
+                                        class="icon-big text-center icon-info bubble-shadow-small"
+                                    >
+                                        <i class="fas fa-user-check"></i>
+                                    </div>
+                                </div>
+                                <div class="col col-stats ms-3 ms-sm-0">
+                                    <div class="numbers">
+                                        <p class="card-category">Subscribers</p>
+                                        <h4 class="card-title">1303</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-stats card-round">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-icon">
+                                    <div
+                                        class="icon-big text-center icon-success bubble-shadow-small"
+                                    >
+                                        <i class="fas fa-luggage-cart"></i>
+                                    </div>
+                                </div>
+                                <div class="col col-stats ms-3 ms-sm-0">
+                                    <div class="numbers">
+                                        <p class="card-category">Sales</p>
+                                        <h4 class="card-title">$ 1,345</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-stats card-round">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-icon">
+                                    <div
+                                        class="icon-big text-center icon-secondary bubble-shadow-small"
+                                    >
+                                        <i class="far fa-check-circle"></i>
+                                    </div>
+                                </div>
+                                <div class="col col-stats ms-3 ms-sm-0">
+                                    <div class="numbers">
+                                        <p class="card-category">Order</p>
+                                        <h4 class="card-title">576</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div><!--end row-->
-
-        <div class="row">
-           <div class="col-12 col-lg-6 col-xl-6 d-flex">
-            <div class="card radius-10 w-100">
-              <div class="card-header bg-transparent">
-                <div class="row g-3 align-items-center">
-                  <div class="col">
-                    <h5 class="mb-0">Statistics</h5>
-                  </div>
-                  <div class="col">
-                    <div class="d-flex align-items-center justify-content-end gap-3 cursor-pointer">
-                      <div class="dropdown">
-                        <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-dots-horizontal-rounded font-22 text-option"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="javascript:;">Action</a>
-                          </li>
-                          <li><a class="dropdown-item" href="javascript:;">Another action</a>
-                          </li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="javascript:;">Something else here</a>
-                          </li>
-                        </ul>
-                      </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card card-round">
+                        <div class="card-header">
+                            <div class="card-head-row">
+                                <div class="card-title">User Statistics</div>
+                                <div class="card-tools">
+                                    <a
+                                        href="#"
+                                        class="btn btn-label-success btn-round btn-sm me-2"
+                                    >
+                              <span class="btn-label">
+                                <i class="fa fa-pencil"></i>
+                              </span>
+                                        Export
+                                    </a>
+                                    <a href="#" class="btn btn-label-info btn-round btn-sm">
+                              <span class="btn-label">
+                                <i class="fa fa-print"></i>
+                              </span>
+                                        Print
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-container" style="min-height: 375px">
+                                <canvas id="statisticsChart"></canvas>
+                            </div>
+                            <div id="myChartLegend"></div>
+                        </div>
                     </div>
-                  </div>
-                 </div>
-              </div>
-              <div class="card-body">
-                <div class="d-lg-flex align-items-center justify-content-center gap-2">
-                  <div id="chart3"></div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><i class="bi bi-circle-fill text-purple me-1"></i> Visitors:<span class="me-1">89</span></li>
-                    <li class="list-group-item"><i class="bi bi-circle-fill text-info me-1"></i> Subscribers:<span class="me-1">45</span></li>
-                    <li class="list-group-item"><i class="bi bi-circle-fill text-pink me-1"></i> Contributor:<span class="me-1">35</span></li>
-                    <li class="list-group-item"><i class="bi bi-circle-fill text-success me-1"></i> Author:<span class="me-1">62</span></li>
-                  </ul>
                 </div>
-              </div>
+                <div class="col-md-4">
+                    <div class="card card-primary card-round">
+                        <div class="card-header">
+                            <div class="card-head-row">
+                                <div class="card-title">Daily Sales</div>
+                                <div class="card-tools">
+                                    <div class="dropdown">
+                                        <button
+                                            class="btn btn-sm btn-label-light dropdown-toggle"
+                                            type="button"
+                                            id="dropdownMenuButton"
+                                            data-bs-toggle="dropdown"
+                                            aria-haspopup="true"
+                                            aria-expanded="false"
+                                        >
+                                            Export
+                                        </button>
+                                        <div
+                                            class="dropdown-menu"
+                                            aria-labelledby="dropdownMenuButton"
+                                        >
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#"
+                                            >Something else here</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-category">March 25 - April 02</div>
+                        </div>
+                        <div class="card-body pb-0">
+                            <div class="mb-4 mt-2">
+                                <h1>$4,578.58</h1>
+                            </div>
+                            <div class="pull-in">
+                                <canvas id="dailySalesChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-round">
+                        <div class="card-body pb-0">
+                            <div class="h1 fw-bold float-end text-primary">+5%</div>
+                            <h2 class="mb-2">17</h2>
+                            <p class="text-muted">Users online</p>
+                            <div class="pull-in sparkline-fix">
+                                <div id="lineChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-           </div>
-           <div class="col-12 col-lg-6 col-xl-6 d-flex">
-            <div class="card radius-10 w-100">
-              <div class="card-body">
-                <div class="row row-cols-1 row-cols-lg-2 g-3 align-items-center">
-                  <div class="col">
-                    <h5 class="mb-0">Product Actions</h5>
-                  </div>
-                  <div class="col">
-                    <div class="d-flex align-items-center justify-content-sm-end gap-3 cursor-pointer">
-                       <div class="font-13"><i class="bi bi-circle-fill text-primary"></i><span class="ms-2">Views</span></div>
-                       <div class="font-13"><i class="bi bi-circle-fill text-pink"></i><span class="ms-2">Clicks</span></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-round">
+                        <div class="card-header">
+                            <div class="card-head-row card-tools-still-right">
+                                <h4 class="card-title">Users Geolocation</h4>
+                                <div class="card-tools">
+                                    <button
+                                        class="btn btn-icon btn-link btn-primary btn-xs"
+                                    >
+                                        <span class="fa fa-angle-down"></span>
+                                    </button>
+                                    <button
+                                        class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"
+                                    >
+                                        <span class="fa fa-sync-alt"></span>
+                                    </button>
+                                    <button
+                                        class="btn btn-icon btn-link btn-primary btn-xs"
+                                    >
+                                        <span class="fa fa-times"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="card-category">
+                                Map of the distribution of users around the world
+                            </p>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="table-responsive table-hover table-sales">
+                                        <table class="table">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img
+                                                            src="{{ asset('backend/assets/img/flags/id.png') }}"
+                                                            alt="indonesia"
+                                                        />
+                                                    </div>
+                                                </td>
+                                                <td>Indonesia</td>
+                                                <td class="text-end">2.320</td>
+                                                <td class="text-end">42.18%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img
+                                                            src="{{ asset('backend/assets/img/flags/us.png') }}"
+                                                            alt="united states"
+                                                        />
+                                                    </div>
+                                                </td>
+                                                <td>USA</td>
+                                                <td class="text-end">240</td>
+                                                <td class="text-end">4.36%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img
+                                                            src="{{ asset('backend/assets/img/flags/au.png') }}"
+                                                            alt="australia"
+                                                        />
+                                                    </div>
+                                                </td>
+                                                <td>Australia</td>
+                                                <td class="text-end">119</td>
+                                                <td class="text-end">2.16%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img
+                                                            src="{{ asset('backend/assets/img/flags/ru.png') }}"
+                                                            alt="russia"
+                                                        />
+                                                    </div>
+                                                </td>
+                                                <td>Russia</td>
+                                                <td class="text-end">1.081</td>
+                                                <td class="text-end">19.65%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img
+                                                            src="{{ asset('backend/assets/img/flags/cn.png') }}"
+                                                            alt="china"
+                                                        />
+                                                    </div>
+                                                </td>
+                                                <td>China</td>
+                                                <td class="text-end">1.100</td>
+                                                <td class="text-end">20%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img
+                                                            src="{{ asset('backend/assets/img/flags/br.png') }}"
+                                                            alt="brazil"
+                                                        />
+                                                    </div>
+                                                </td>
+                                                <td>Brasil</td>
+                                                <td class="text-end">640</td>
+                                                <td class="text-end">11.63%</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mapcontainer">
+                                        <div
+                                            id="world-map"
+                                            class="w-100"
+                                            style="height: 300px"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                 </div>
-                  <div id="chart4"></div>
                 </div>
-              </div>
-           </div>
-        </div><!--end row-->
-
-
-        <div class="row">
-           <div class="col-12 col-lg-6 col-xl-4 d-flex">
-             <div class="card radius-10 w-100">
-              <div class="card-header bg-transparent">
-                <div class="row g-3 align-items-center">
-                  <div class="col">
-                    <h5 class="mb-0">Top Categories</h5>
-                  </div>
-                  <div class="col">
-                    <div class="d-flex align-items-center justify-content-end gap-3 cursor-pointer">
-                      <div class="dropdown">
-                        <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-dots-horizontal-rounded font-22 text-option"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="javascript:;">Action</a>
-                          </li>
-                          <li><a class="dropdown-item" href="javascript:;">Another action</a>
-                          </li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="javascript:;">Something else here</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                 </div>
-              </div>
-               <div class="card-body">
-                 <div class="categories">
-                    <div class="progress-wrapper">
-                      <p class="mb-2">Electronic <span class="float-end">85%</span></p>
-                      <div class="progress" style="height: 6px;">
-                        <div class="progress-bar bg-gradient-purple" role="progressbar" style="width: 85%;"></div>
-                      </div>
-                    </div>
-                    <div class="my-3 border-top"></div>
-                    <div class="progress-wrapper">
-                      <p class="mb-2">Furniture <span class="float-end">70%</span></p>
-                      <div class="progress" style="height: 6px;">
-                        <div class="progress-bar bg-gradient-danger" role="progressbar" style="width: 70%;"></div>
-                      </div>
-                    </div>
-                    <div class="my-3 border-top"></div>
-                    <div class="progress-wrapper">
-                      <p class="mb-2">Fashion <span class="float-end">66%</span></p>
-                      <div class="progress" style="height: 6px;">
-                        <div class="progress-bar bg-gradient-success" role="progressbar" style="width: 66%;"></div>
-                      </div>
-                    </div>
-                    <div class="my-3 border-top"></div>
-                    <div class="progress-wrapper">
-                      <p class="mb-2">Mobiles <span class="float-end">76%</span></p>
-                      <div class="progress" style="height: 6px;">
-                        <div class="progress-bar bg-gradient-info" role="progressbar" style="width: 76%;"></div>
-                      </div>
-                    </div>
-                    <div class="my-3 border-top"></div>
-                    <div class="progress-wrapper">
-                      <p class="mb-2">Accessories <span class="float-end">80%</span></p>
-                      <div class="progress" style="height: 6px;">
-                        <div class="progress-bar bg-gradient-warning" role="progressbar" style="width: 80%;"></div>
-                      </div>
-                    </div>
-                    <div class="my-3 border-top"></div>
-                    <div class="progress-wrapper">
-                      <p class="mb-2">Watches <span class="float-end">65%</span></p>
-                      <div class="progress" style="height: 6px;">
-                        <div class="progress-bar bg-gradient-voilet" role="progressbar" style="width: 65%;"></div>
-                      </div>
-                    </div>
-                    <div class="my-3 border-top"></div>
-                    <div class="progress-wrapper">
-                      <p class="mb-2">Sports <span class="float-end">45%</span></p>
-                      <div class="progress" style="height: 6px;">
-                        <div class="progress-bar bg-gradient-royal" role="progressbar" style="width: 45%;"></div>
-                      </div>
-                    </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-           <div class="col-12 col-lg-6 col-xl-4 d-flex">
-            <div class="card radius-10 w-100">
-              <div class="card-header bg-transparent">
-                <div class="row g-3 align-items-center">
-                  <div class="col">
-                    <h5 class="mb-0">Best Products</h5>
-                  </div>
-                  <div class="col">
-                    <div class="d-flex align-items-center justify-content-end gap-3 cursor-pointer">
-                      <div class="dropdown">
-                        <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-dots-horizontal-rounded font-22 text-option"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="javascript:;">Action</a>
-                          </li>
-                          <li><a class="dropdown-item" href="javascript:;">Another action</a>
-                          </li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="javascript:;">Something else here</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                 </div>
-              </div>
-              <div class="card-body p-0">
-                 <div class="best-product p-2 mb-3">
-                   <div class="best-product-item">
-                     <div class="d-flex align-items-center gap-3">
-                       <div class="product-box border">
-                          <img src="{{ asset('/backend') }}/assets/images/products/01.png" alt="">
-                       </div>
-                       <div class="product-info">
-                         <h6 class="product-name mb-1">White Polo T-Shirt</h6>
-                         <div class="product-rating mb-0">
-                          <i class="bi bi-star-fill text-warning"></i>
-                          <i class="bi bi-star-fill text-warning"></i>
-                          <i class="bi bi-star-fill text-warning"></i>
-                          <i class="bi bi-star-fill text-warning"></i>
-                          <i class="bi bi-star-fill text-warning"></i>
-                         </div>
-                       </div>
-                       <div class="sales-count ms-auto">
-                         <p class="mb-0">245 Sales</p>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="best-product-item">
-                    <div class="d-flex align-items-center gap-3">
-                      <div class="product-box border">
-                         <img src="{{ asset('/backend') }}/assets/images/products/02.png" alt="">
-                      </div>
-                      <div class="product-info">
-                        <h6 class="product-name mb-1">Formal Coat Pant</h6>
-                        <div class="product-rating mb-0">
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                        </div>
-                      </div>
-                      <div class="sales-count ms-auto">
-                        <p class="mb-0">325 Sales</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="best-product-item">
-                    <div class="d-flex align-items-center gap-3">
-                      <div class="product-box border">
-                         <img src="{{ asset('/backend') }}/assets/images/products/03.png" alt="">
-                      </div>
-                      <div class="product-info">
-                        <h6 class="product-name mb-1">Blue Shade Jeans</h6>
-                        <div class="product-rating mb-0">
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                        </div>
-                      </div>
-                      <div class="sales-count ms-auto">
-                        <p class="mb-0">189 Sales</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="best-product-item">
-                    <div class="d-flex align-items-center gap-3">
-                      <div class="product-box border">
-                         <img src="{{ asset('/backend') }}/assets/images/products/04.png" alt="">
-                      </div>
-                      <div class="product-info">
-                        <h6 class="product-name mb-1">Yellow Winter Jacket</h6>
-                        <div class="product-rating mb-0">
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill"></i>
-                         <i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                      <div class="sales-count ms-auto">
-                        <p class="mb-0">102 Sales</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="best-product-item">
-                    <div class="d-flex align-items-center gap-3">
-                      <div class="product-box border">
-                         <img src="{{ asset('/backend') }}/assets/images/products/05.png" alt="">
-                      </div>
-                      <div class="product-info">
-                        <h6 class="product-name mb-1">Men Sports Shoes</h6>
-                        <div class="product-rating mb-0">
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                      <div class="sales-count ms-auto">
-                        <p class="mb-0">137 Sales</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="best-product-item">
-                    <div class="d-flex align-items-center gap-3">
-                      <div class="product-box border">
-                         <img src="{{ asset('/backend') }}/assets/images/products/06.png" alt="">
-                      </div>
-                      <div class="product-info">
-                        <h6 class="product-name mb-1">Fancy Home Sofa</h6>
-                        <div class="product-rating mb-0">
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                        </div>
-                      </div>
-                      <div class="sales-count ms-auto">
-                        <p class="mb-0">453 Sales</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="best-product-item">
-                    <div class="d-flex align-items-center gap-3">
-                      <div class="product-box border">
-                         <img src="{{ asset('/backend') }}/assets/images/products/07.png" alt="">
-                      </div>
-                      <div class="product-info">
-                        <h6 class="product-name mb-1">Sports Time Watch</h6>
-                        <div class="product-rating mb-0">
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                      <div class="sales-count ms-auto">
-                        <p class="mb-0">198 Sales</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="best-product-item">
-                    <div class="d-flex align-items-center gap-3">
-                      <div class="product-box border">
-                         <img src="{{ asset('/backend') }}/assets/images/products/08.png" alt="">
-                      </div>
-                      <div class="product-info">
-                        <h6 class="product-name mb-1">Women Blue Heals</h6>
-                        <div class="product-rating mb-0">
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill"></i>
-                         <i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                      <div class="sales-count ms-auto">
-                        <p class="mb-0">98 Sales</p>
-                      </div>
-                    </div>
-                  </div>
-                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-12 col-xl-4 d-flex">
-            <div class="card radius-10 w-100">
-              <div class="card-header bg-transparent">
-                <div class="row g-3 align-items-center">
-                  <div class="col">
-                    <h5 class="mb-0">Top Sellers</h5>
-                  </div>
-                  <div class="col">
-                    <div class="d-flex align-items-center justify-content-end gap-3 cursor-pointer">
-                      <div class="dropdown">
-                        <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-dots-horizontal-rounded font-22 text-option"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="javascript:;">Action</a>
-                          </li>
-                          <li><a class="dropdown-item" href="javascript:;">Another action</a>
-                          </li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="javascript:;">Something else here</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                 </div>
-              </div>
-              <div class="top-sellers-list p-2 mb-3">
-                <div class="d-flex align-items-center gap-3 sellers-list-item">
-                   <img src="{{ asset('/backend') }}/assets/images/avatars/avatar-1.png" class="rounded-circle" width="50" height="50" alt="">
-                   <div>
-                     <h6 class="mb-1">Thomas Hardy</h6>
-                     <p class="mb-0 font-13">Customer ID #84586</p>
-                   </div>
-                    <div class="d-flex align-items-center gap-3 fs-6 ms-auto">
-                      <p class="mb-0">5.0 <i class="bi bi-star-fill text-warning"></i></p>
-                    </div>
-                 </div>
-                 <div class="d-flex align-items-center gap-3 sellers-list-item">
-                  <img src="{{ asset('/backend') }}/assets/images/avatars/avatar-2.png" class="rounded-circle" width="50" height="50" alt="">
-                  <div>
-                    <h6 class="mb-0">Pauline Bird</h6>
-                    <p class="mb-0 font-13">Customer ID #86572</p>
-                  </div>
-                  <div class="d-flex align-items-center gap-3 fs-6 ms-auto">
-                    <p class="mb-0">5.0 <i class="bi bi-star-fill text-warning"></i></p>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center gap-3 sellers-list-item">
-                  <img src="{{ asset('/backend') }}/assets/images/avatars/avatar-3.png" class="rounded-circle" width="50" height="50" alt="">
-                  <div>
-                    <h6 class="mb-0">Ralph Alva</h6>
-                    <p class="mb-0 font-13">Customer ID #98657</p>
-                  </div>
-                  <div class="d-flex align-items-center gap-3 fs-6 ms-auto">
-                    <p class="mb-0">4.8 <i class="bi bi-star-half text-warning"></i></p>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center gap-3 sellers-list-item">
-                  <img src="{{ asset('/backend') }}/assets/images/avatars/avatar-4.png" class="rounded-circle" width="50" height="50" alt="">
-                  <div>
-                    <h6 class="mb-0">John Roman</h6>
-                    <p class="mb-0 font-13">Customer ID #78542</p>
-                  </div>
-                  <div class="d-flex align-items-center gap-3 fs-6 ms-auto">
-                    <p class="mb-0">4.7 <i class="bi bi-star-half text-warning"></i></p>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center gap-3 sellers-list-item">
-                  <img src="{{ asset('/backend') }}/assets/images/avatars/avatar-5.png" class="rounded-circle" width="50" height="50" alt="">
-                  <div>
-                    <h6 class="mb-0">David Buckley</h6>
-                    <p class="mb-0 font-13">Customer ID #68574</p>
-                  </div>
-                  <div class="d-flex align-items-center gap-3 fs-6 ms-auto">
-                    <p class="mb-0">5.0 <i class="bi bi-star-fill text-warning"></i></p>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center gap-3 sellers-list-item">
-                  <img src="{{ asset('/backend') }}/assets/images/avatars/avatar-6.png" class="rounded-circle" width="50" height="50" alt="">
-                  <div>
-                    <h6 class="mb-0">Maria Anders</h6>
-                    <p class="mb-0 font-13">Customer ID #86952</p>
-                  </div>
-                  <div class="d-flex align-items-center gap-3 fs-6 ms-auto">
-                    <p class="mb-0">4.8 <i class="bi bi-star-half text-warning"></i></p>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center gap-3 sellers-list-item">
-                  <img src="{{ asset('/backend') }}/assets/images/avatars/avatar-7.png" class="rounded-circle" width="50" height="50" alt="">
-                  <div>
-                    <h6 class="mb-0">Martin Loother</h6>
-                    <p class="mb-0 font-13">Customer ID #83247</p>
-                  </div>
-                  <div class="d-flex align-items-center gap-3 fs-6 ms-auto">
-                    <p class="mb-0">5.0 <i class="bi bi-star-fill text-warning"></i></p>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center gap-3 sellers-list-item">
-                  <img src="{{ asset('/backend') }}/assets/images/avatars/avatar-8.png" class="rounded-circle" width="50" height="50" alt="">
-                  <div>
-                    <h6 class="mb-0">Victoria Hardy</h6>
-                    <p class="mb-0 font-13">Customer ID #67523</p>
-                  </div>
-                  <div class="d-flex align-items-center gap-3 fs-6 ms-auto">
-                    <p class="mb-0">3.9 <i class="bi bi-star-half text-warning"></i></p>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center gap-3 sellers-list-item">
-                  <img src="{{ asset('/backend') }}/assets/images/avatars/avatar-9.png" class="rounded-circle" width="50" height="50" alt="">
-                  <div>
-                    <h6 class="mb-0">David Buckley</h6>
-                    <p class="mb-0 font-13">Customer ID #94256</p>
-                  </div>
-                  <div class="d-flex align-items-center gap-3 fs-6 ms-auto">
-                    <p class="mb-0">3.5 <i class="bi bi-star-half text-warning"></i></p>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center gap-3 sellers-list-item">
-                  <img src="{{ asset('/backend') }}/assets/images/avatars/avatar-10.png" class="rounded-circle" width="50" height="50" alt="">
-                  <div>
-                    <h6 class="mb-0">Victoria Hardy</h6>
-                    <p class="mb-0 font-13">Customer ID #48759</p>
-                  </div>
-                  <div class="d-flex align-items-center gap-3 fs-6 ms-auto">
-                    <p class="mb-0">3.4 <i class="bi bi-star-half text-warning"></i></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!--end row-->
-        
-        <div class="card radius-10">
-           <div class="card-body">
-             <div class="row g-3">
-               <div class="col-12 col-lg-4 col-xl-4 d-flex">
-                <div class="card mb-0 radius-10 border shadow-none w-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Top Sales Locations</h5>
-                    <h4 class="mt-4">$36.2K <i class="flag-icon flag-icon-us rounded"></i></h4>
-                    <p class="mb-0 text-secondary font-13">Our Most Customers in US</p>
-                    <ul class="list-group list-group-flush mt-3">
-                      <li class="list-group-item border-top">
-                        <div class="d-flex align-items-center gap-2">
-                           <div><i class="flag-icon flag-icon-us"></i></div>
-                           <div>United States</div>
-                           <div class="ms-auto">289</div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card card-round">
+                        <div class="card-body">
+                            <div class="card-head-row card-tools-still-right">
+                                <div class="card-title">New Customers</div>
+                                <div class="card-tools">
+                                    <div class="dropdown">
+                                        <button
+                                            class="btn btn-icon btn-clean me-0"
+                                            type="button"
+                                            id="dropdownMenuButton"
+                                            data-bs-toggle="dropdown"
+                                            aria-haspopup="true"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div
+                                            class="dropdown-menu"
+                                            aria-labelledby="dropdownMenuButton"
+                                        >
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#"
+                                            >Something else here</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-list py-4">
+                                <div class="item-list">
+                                    <div class="avatar">
+                                        <img
+                                            src="{{ asset('backend/assets/img/jm_denis.jpg') }}"
+                                            alt="..."
+                                            class="avatar-img rounded-circle"
+                                        />
+                                    </div>
+                                    <div class="info-user ms-3">
+                                        <div class="username">Jimmy Denis</div>
+                                        <div class="status">Graphic Designer</div>
+                                    </div>
+                                    <button class="btn btn-icon btn-link op-8 me-1">
+                                        <i class="far fa-envelope"></i>
+                                    </button>
+                                    <button class="btn btn-icon btn-link btn-danger op-8">
+                                        <i class="fas fa-ban"></i>
+                                    </button>
+                                </div>
+                                <div class="item-list">
+                                    <div class="avatar">
+                              <span
+                                  class="avatar-title rounded-circle border border-white"
+                              >CF</span
+                              >
+                                    </div>
+                                    <div class="info-user ms-3">
+                                        <div class="username">Chandra Felix</div>
+                                        <div class="status">Sales Promotion</div>
+                                    </div>
+                                    <button class="btn btn-icon btn-link op-8 me-1">
+                                        <i class="far fa-envelope"></i>
+                                    </button>
+                                    <button class="btn btn-icon btn-link btn-danger op-8">
+                                        <i class="fas fa-ban"></i>
+                                    </button>
+                                </div>
+                                <div class="item-list">
+                                    <div class="avatar">
+                                        <img
+                                            src="{{ asset('backend/assets/img/talha.jpg') }}"
+                                            alt="..."
+                                            class="avatar-img rounded-circle"
+                                        />
+                                    </div>
+                                    <div class="info-user ms-3">
+                                        <div class="username">Talha</div>
+                                        <div class="status">Front End Designer</div>
+                                    </div>
+                                    <button class="btn btn-icon btn-link op-8 me-1">
+                                        <i class="far fa-envelope"></i>
+                                    </button>
+                                    <button class="btn btn-icon btn-link btn-danger op-8">
+                                        <i class="fas fa-ban"></i>
+                                    </button>
+                                </div>
+                                <div class="item-list">
+                                    <div class="avatar">
+                                        <img
+                                            src="{{ asset('backend/assets/img/chadengle.jpg') }}"
+                                            alt="..."
+                                            class="avatar-img rounded-circle"
+                                        />
+                                    </div>
+                                    <div class="info-user ms-3">
+                                        <div class="username">Chad</div>
+                                        <div class="status">CEO Zeleaf</div>
+                                    </div>
+                                    <button class="btn btn-icon btn-link op-8 me-1">
+                                        <i class="far fa-envelope"></i>
+                                    </button>
+                                    <button class="btn btn-icon btn-link btn-danger op-8">
+                                        <i class="fas fa-ban"></i>
+                                    </button>
+                                </div>
+                                <div class="item-list">
+                                    <div class="avatar">
+                              <span
+                                  class="avatar-title rounded-circle border border-white bg-primary"
+                              >H</span
+                              >
+                                    </div>
+                                    <div class="info-user ms-3">
+                                        <div class="username">Hizrian</div>
+                                        <div class="status">Web Designer</div>
+                                    </div>
+                                    <button class="btn btn-icon btn-link op-8 me-1">
+                                        <i class="far fa-envelope"></i>
+                                    </button>
+                                    <button class="btn btn-icon btn-link btn-danger op-8">
+                                        <i class="fas fa-ban"></i>
+                                    </button>
+                                </div>
+                                <div class="item-list">
+                                    <div class="avatar">
+                              <span
+                                  class="avatar-title rounded-circle border border-white bg-secondary"
+                              >F</span
+                              >
+                                    </div>
+                                    <div class="info-user ms-3">
+                                        <div class="username">Farrah</div>
+                                        <div class="status">Marketing</div>
+                                    </div>
+                                    <button class="btn btn-icon btn-link op-8 me-1">
+                                        <i class="far fa-envelope"></i>
+                                    </button>
+                                    <button class="btn btn-icon btn-link btn-danger op-8">
+                                        <i class="fas fa-ban"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                      </li>
-                      <li class="list-group-item">
-                       <div class="d-flex align-items-center gap-2">
-                          <div><i class="flag-icon flag-icon-au"></i></div>
-                          <div>Malaysia</div>
-                          <div class="ms-auto">562</div>
-                       </div>
-                     </li>
-                     <li class="list-group-item">
-                       <div class="d-flex align-items-center gap-2">
-                          <div><i class="flag-icon flag-icon-in"></i></div>
-                          <div>India</div>
-                          <div class="ms-auto">354</div>
-                       </div>
-                     </li>
-                     <li class="list-group-item">
-                       <div class="d-flex align-items-center gap-2">
-                          <div><i class="flag-icon flag-icon-ca"></i></div>
-                          <div>Indonesia</div>
-                          <div class="ms-auto">147</div>
-                       </div>
-                     </li>
-                     <li class="list-group-item">
-                       <div class="d-flex align-items-center gap-2">
-                          <div><i class="flag-icon flag-icon-ad"></i></div>
-                          <div>Turkey</div>
-                          <div class="ms-auto">652</div>
-                       </div>
-                     </li>
-                     <li class="list-group-item">
-                       <div class="d-flex align-items-center gap-2">
-                          <div><i class="flag-icon flag-icon-cu"></i></div>
-                          <div>Netherlands</div>
-                          <div class="ms-auto">287</div>
-                       </div>
-                     </li>
-                     <li class="list-group-item">
-                       <div class="d-flex align-items-center gap-2">
-                          <div><i class="flag-icon flag-icon-is"></i></div>
-                          <div>Italy</div>
-                          <div class="ms-auto">634</div>
-                       </div>
-                     </li>
-                     <li class="list-group-item">
-                       <div class="d-flex align-items-center gap-2">
-                          <div><i class="flag-icon flag-icon-ge"></i></div>
-                          <div>Canada</div>
-                          <div class="ms-auto">524</div>
-                       </div>
-                     </li>
-                    </ul>
-                  </div>
+                    </div>
                 </div>
-               </div>
-               <div class="col-12 col-lg-8 col-xl-8 d-flex">
-                <div class="card mb-0 radius-10 border shadow-none w-100">
-                  <div class="card-body">
-                    <div class="" id="geographic-map"></div>
-                   </div>
-                  </div>
-              </div>
-             </div><!--end row-->
-           </div>
+                <div class="col-md-8">
+                    <div class="card card-round">
+                        <div class="card-header">
+                            <div class="card-head-row card-tools-still-right">
+                                <div class="card-title">Transaction History</div>
+                                <div class="card-tools">
+                                    <div class="dropdown">
+                                        <button
+                                            class="btn btn-icon btn-clean me-0"
+                                            type="button"
+                                            id="dropdownMenuButton"
+                                            data-bs-toggle="dropdown"
+                                            aria-haspopup="true"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div
+                                            class="dropdown-menu"
+                                            aria-labelledby="dropdownMenuButton"
+                                        >
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#"
+                                            >Something else here</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <!-- Projects table -->
+                                <table class="table align-items-center mb-0">
+                                    <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Payment Number</th>
+                                        <th scope="col" class="text-end">Date & Time</th>
+                                        <th scope="col" class="text-end">Amount</th>
+                                        <th scope="col" class="text-end">Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <button
+                                                class="btn btn-icon btn-round btn-success btn-sm me-2"
+                                            >
+                                                <i class="fa fa-check"></i>
+                                            </button>
+                                            Payment from #10231
+                                        </th>
+                                        <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                                        <td class="text-end">$250.00</td>
+                                        <td class="text-end">
+                                            <span class="badge badge-success">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <button
+                                                class="btn btn-icon btn-round btn-success btn-sm me-2"
+                                            >
+                                                <i class="fa fa-check"></i>
+                                            </button>
+                                            Payment from #10231
+                                        </th>
+                                        <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                                        <td class="text-end">$250.00</td>
+                                        <td class="text-end">
+                                            <span class="badge badge-success">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <button
+                                                class="btn btn-icon btn-round btn-success btn-sm me-2"
+                                            >
+                                                <i class="fa fa-check"></i>
+                                            </button>
+                                            Payment from #10231
+                                        </th>
+                                        <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                                        <td class="text-end">$250.00</td>
+                                        <td class="text-end">
+                                            <span class="badge badge-success">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <button
+                                                class="btn btn-icon btn-round btn-success btn-sm me-2"
+                                            >
+                                                <i class="fa fa-check"></i>
+                                            </button>
+                                            Payment from #10231
+                                        </th>
+                                        <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                                        <td class="text-end">$250.00</td>
+                                        <td class="text-end">
+                                            <span class="badge badge-success">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <button
+                                                class="btn btn-icon btn-round btn-success btn-sm me-2"
+                                            >
+                                                <i class="fa fa-check"></i>
+                                            </button>
+                                            Payment from #10231
+                                        </th>
+                                        <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                                        <td class="text-end">$250.00</td>
+                                        <td class="text-end">
+                                            <span class="badge badge-success">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <button
+                                                class="btn btn-icon btn-round btn-success btn-sm me-2"
+                                            >
+                                                <i class="fa fa-check"></i>
+                                            </button>
+                                            Payment from #10231
+                                        </th>
+                                        <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                                        <td class="text-end">$250.00</td>
+                                        <td class="text-end">
+                                            <span class="badge badge-success">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <button
+                                                class="btn btn-icon btn-round btn-success btn-sm me-2"
+                                            >
+                                                <i class="fa fa-check"></i>
+                                            </button>
+                                            Payment from #10231
+                                        </th>
+                                        <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                                        <td class="text-end">$250.00</td>
+                                        <td class="text-end">
+                                            <span class="badge badge-success">Completed</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="card radius-10">
-          <div class="card-header bg-transparent">
-            <div class="row g-3 align-items-center">
-              <div class="col">
-                <h5 class="mb-0">Recent Orders</h5>
-              </div>
-              <div class="col">
-                <div class="d-flex align-items-center justify-content-end gap-3 cursor-pointer">
-                  <div class="dropdown">
-                    <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-dots-horizontal-rounded font-22 text-option"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="javascript:;">Action</a>
-                      </li>
-                      <li><a class="dropdown-item" href="javascript:;">Another action</a>
-                      </li>
-                      <li>
-                        <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item" href="javascript:;">Something else here</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-             </div>
-          </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table align-middle mb-0">
-                <thead class="table-light">
-                  <tr>
-                    <th>#ID</th>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Date</th>
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>#89742</td>
-                    <td>
-                      <div class="d-flex align-items-center gap-3">
-                        <div class="product-box border">
-                           <img src="{{ asset('/backend') }}/assets/images/products/11.png" alt="">
-                        </div>
-                        <div class="product-info">
-                          <h6 class="product-name mb-1">Smart Mobile Phone</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>2</td>
-                    <td>$214</td>
-                    <td>Apr 8, 2021</td>
-                    <td>
-                      <div class="d-flex align-items-center gap-3 fs-6">
-                        <a href="javascript:;" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="View detail" aria-label="Views"><i class="bi bi-eye-fill"></i></a>
-                        <a href="javascript:;" class="text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Edit info" aria-label="Edit"><i class="bi bi-pencil-fill"></i></a>
-                        <a href="javascript:;" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="bi bi-trash-fill"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>#68570</td>
-                    <td>
-                      <div class="d-flex align-items-center gap-3">
-                        <div class="product-box border">
-                           <img src="{{ asset('/backend') }}/assets/images/products/07.png" alt="">
-                        </div>
-                        <div class="product-info">
-                          <h6 class="product-name mb-1">Sports Time Watch</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>1</td>
-                    <td>$185</td>
-                    <td>Apr 9, 2021</td>
-                    <td>
-                      <div class="d-flex align-items-center gap-3 fs-6">
-                        <a href="javascript:;" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="View detail" aria-label="Views"><i class="bi bi-eye-fill"></i></a>
-                        <a href="javascript:;" class="text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Edit info" aria-label="Edit"><i class="bi bi-pencil-fill"></i></a>
-                        <a href="javascript:;" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="bi bi-trash-fill"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>#38567</td>
-                    <td>
-                      <div class="d-flex align-items-center gap-3">
-                        <div class="product-box border">
-                           <img src="{{ asset('/backend') }}/assets/images/products/17.png" alt="">
-                        </div>
-                        <div class="product-info">
-                          <h6 class="product-name mb-1">Women Red Heals</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>3</td>
-                    <td>$356</td>
-                    <td>Apr 10, 2021</td>
-                    <td>
-                      <div class="d-flex align-items-center gap-3 fs-6">
-                        <a href="javascript:;" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="View detail" aria-label="Views"><i class="bi bi-eye-fill"></i></a>
-                        <a href="javascript:;" class="text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Edit info" aria-label="Edit"><i class="bi bi-pencil-fill"></i></a>
-                        <a href="javascript:;" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="bi bi-trash-fill"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>#48572</td>
-                    <td>
-                      <div class="d-flex align-items-center gap-3">
-                        <div class="product-box border">
-                           <img src="{{ asset('/backend') }}/assets/images/products/04.png" alt="">
-                        </div>
-                        <div class="product-info">
-                          <h6 class="product-name mb-1">Yellow Winter Jacket</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>1</td>
-                    <td>$149</td>
-                    <td>Apr 11, 2021</td>
-                    <td>
-                      <div class="d-flex align-items-center gap-3 fs-6">
-                        <a href="javascript:;" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="View detail" aria-label="Views"><i class="bi bi-eye-fill"></i></a>
-                        <a href="javascript:;" class="text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Edit info" aria-label="Edit"><i class="bi bi-pencil-fill"></i></a>
-                        <a href="javascript:;" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="bi bi-trash-fill"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>#96857</td>
-                    <td>
-                      <div class="d-flex align-items-center gap-3">
-                        <div class="product-box border">
-                           <img src="{{ asset('/backend') }}/assets/images/products/10.png" alt="">
-                        </div>
-                        <div class="product-info">
-                          <h6 class="product-name mb-1">Orange Micro Headphone</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>2</td>
-                    <td>$199</td>
-                    <td>Apr 15, 2021</td>
-                    <td>
-                      <div class="d-flex align-items-center gap-3 fs-6">
-                        <a href="javascript:;" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="View detail" aria-label="Views"><i class="bi bi-eye-fill"></i></a>
-                        <a href="javascript:;" class="text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Edit info" aria-label="Edit"><i class="bi bi-pencil-fill"></i></a>
-                        <a href="javascript:;" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="bi bi-trash-fill"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>#68527</td>
-                    <td>
-                      <div class="d-flex align-items-center gap-3">
-                        <div class="product-box border">
-                           <img src="{{ asset('/backend') }}/assets/images/products/05.png" alt="">
-                        </div>
-                        <div class="product-info">
-                          <h6 class="product-name mb-1">Men Sports Shoes Nike</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>1</td>
-                    <td>$124</td>
-                    <td>Apr 22, 2021</td>
-                    <td>
-                      <div class="d-flex align-items-center gap-3 fs-6">
-                        <a href="javascript:;" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="View detail" aria-label="Views"><i class="bi bi-eye-fill"></i></a>
-                        <a href="javascript:;" class="text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Edit info" aria-label="Edit"><i class="bi bi-pencil-fill"></i></a>
-                        <a href="javascript:;" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="bi bi-trash-fill"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </main>
-      @endsection
+    </div>
+@endsection
