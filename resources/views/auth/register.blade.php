@@ -16,6 +16,20 @@
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
+        <!--Mobile Number-->
+        <div class="mt-4">
+            <x-input-label for="mobile_number" :value="__('Mobile Number')" />
+            <x-text-input id="mobile_number" class="block mt-1 w-full" type="number" name="mobile_number" :value="old('mobile_number')" required  />
+            <x-input-error :messages="$errors->get('mobile_number')" class="mt-2" />
+        </div>
+
+        <!--Zila-->
+        <div class="mt-4">
+            <x-input-label for="zila" :value="__('Zila')" />
+            <x-text-input id="zila" class="block mt-1 w-full" type="text" name="zila" :value="old('zila')" required  />
+            <x-input-error :messages="$errors->get('zila')" class="mt-2" />
+        </div>
+
         <!-- Password -->
         <div class="mt-4">
             <x-input-label for="password" :value="__('Password')" />

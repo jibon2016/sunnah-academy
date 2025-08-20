@@ -31,13 +31,20 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
+            'mobile_number' => ['required', 'digits:11'],
+            'zila' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        $otp = mt_rand(1000, 9999);
+
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'mobile_number' => $request->mobile_number,
+            'zila' => $request->zila,
+            'otp' => $otp,
             'password' => Hash::make($request->password),
         ]);
 

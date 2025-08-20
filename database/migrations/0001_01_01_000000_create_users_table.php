@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('mobile_number')->nullable();
+            $table->string('zila')->nullable();
+            $table->integer('otp')->nullable();
             $table->tinyInteger('role')->default(0)->comment('1 - Admin, 0 - User');
             $table->rememberToken();
             $table->timestamps();

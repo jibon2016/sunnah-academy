@@ -351,8 +351,8 @@
                                         />
                                     </div>
                                     <div class="u-text">
-                                        <h4>Hizrian</h4>
-                                        <p class="text-muted">hello@example.com</p>
+                                        <h4>{{ auth()->user()->name }}</h4>
+                                        <p class="text-muted">{{ auth()->user()->email }}</p>
                                         <a
                                             href="profile.html"
                                             class="btn btn-xs btn-secondary btn-sm"
