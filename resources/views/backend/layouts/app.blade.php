@@ -34,8 +34,17 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/css/plugins.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('backend/assets/css/kaiadmin.min.css') }}" />
 
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/demo.css') }}" />
+    <!-- DataTables -->
+    <link rel="stylesheet"
+          href="{{ asset('backend/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('backend/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('backend/assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
+    <!-- ColReorder CSS -->
+    <link rel="stylesheet"  href="{{ asset('backend/assets/plugins/datatables-colreorder/css/colReorder.bootstrap4.min.css') }}">
+
+
 </head>
 <body>
     <div class="wrapper">
@@ -264,7 +273,7 @@
 <script src="{{ asset('backend/assets/js/plugin/chart-circle/circles.min.js') }}"></script>
 
 <!-- Datatables -->
-<script src="{{ asset('backend/assets/js/plugin/datatables/datatables.min.js') }}"></script>
+{{--<script src="{{ asset('backend/assets/js/plugin/datatables/datatables.min.js') }}"></script>--}}
 
 <!-- Bootstrap Notify -->
 <script src="{{ asset('backend/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js') }}"></script>
@@ -279,10 +288,22 @@
 <!-- Kaiadmin JS -->
 <script src="{{ asset('backend/assets/js/kaiadmin.min.js') }}"></script>
 
-<!-- Kaiadmin DEMO methods, don't include it in your project! -->
-<script src="{{ asset('backend/assets/js/setting-demo.js') }}"></script>
-<script src="{{ asset('backend/assets/js/demo.js') }}"></script>
-<script>
+    <!-- DataTables  & Plugins -->
+    <script src="{{ asset('backend/assets/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/plugins/datatables-buttons/js/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/plugins/jszip/jszip.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/plugins/pdfmake/pdfmake.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/plugins/pdfmake/vfs_fonts.js') }}"></script>
+    <script src="{{ asset('backend/assets/plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/plugins/datatables-colreorder/js/dataTables.colReorder.min.js') }}"></script>
+
+    <script>
     $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
         type: "line",
         height: "70",
@@ -310,5 +331,6 @@
         fillColor: "rgba(255, 165, 52, .14)",
     });
 </script>
+@stack('script')
 </body>
 </html>

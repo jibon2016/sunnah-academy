@@ -50,6 +50,22 @@
                     </div>
                     @endcan
                 </li>
+                <li class="nav-item">
+                    <a data-bs-toggle="collapse" href="#mosque">
+                        <i class="fas fa-archway"></i>
+                        <p>Mosques</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="mosque">
+                        <ul class="nav nav-collapse">
+                            <li>
+                                <a href="{{ route('mosque.index') }}">
+                                    <span class="sub-item">All Mosque</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
                 @can('admin')
                     <li class="nav-section">
                         <span class="sidebar-mini-icon">

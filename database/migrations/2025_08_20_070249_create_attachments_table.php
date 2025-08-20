@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mosques', function (Blueprint $table) {
+        Schema::create('attachments', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->string('division')->nullable();
-            $table->string('district')->nullable();
-            $table->string('post')->nullable();
-            $table->string('address')->nullable();
-            $table->text('details')->nullable();
+            $table->morphs('attachable');
+            $table->bigInteger('sort')->nullable();
+            $table->string('file')->nullable();
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('mosques');
+        Schema::dropIfExists('attachments');
     }
 };
