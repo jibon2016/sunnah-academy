@@ -9,6 +9,8 @@ Route::get('/', function () {
     return view('frontend.home.index');
 })->name('home');
 
+Route::get('/mosque/{mosque}/show',[MosqueController::class,'show'])->name('mosque.show');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -32,7 +34,7 @@ Route::middleware('auth')->group(function () {
 
     //All Mosque
     Route::get('datatable/mosque', [MosqueController::class, 'dataTable'])->name('mosque.datatable');
-    Route::resource('mosque', MosqueController::class);
+    Route::resource('mosque', MosqueController::class)->except('show');
 });
 
 require __DIR__.'/auth.php';

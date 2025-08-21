@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>THEMosque - Mosque Website Template</title>
+        <title>@yield('title', 'Sunnah Academy ')- Mosque Website Template</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -29,7 +29,7 @@
         <link href="{{ asset('/assets') }}/css/style.css" rel="stylesheet">
         <link href="{{ asset('/assets') }}/css/prayer_time.css" rel="stylesheet">
 
-        
+
 
     </head>
 
@@ -42,18 +42,16 @@
         <!-- Spinner End -->
 
 
- @include('frontend.layouts.header')
+    @include('frontend.layouts.header')
 
             @yield('content')
-
-
 
     @include('frontend.layouts.footer')
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-primary border-3 border-light back-to-top"><i class="fa fa-arrow-up"></i></a>   
+        <a href="#" class="btn btn-primary border-3 border-light back-to-top"><i class="fa fa-arrow-up"></i></a>
 
-        
+
         <!-- JavaScript Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -23,7 +23,8 @@ class MosqueController extends Controller
         return DataTables::eloquent($query)
             ->addIndexColumn()
             ->addColumn('action', function(Mosque $mosque) {
-                return '<a href="'.route('mosque.edit',['mosque' => $mosque->id]).'" class="btn btn-primary bg-gradient-primary btn-sm btn-edit"><i class="fa fa-edit"></i></a>
+                return '<a role="button" href="'. route('mosque.show',['mosque' => $mosque->id]).'" class="btn btn-secondary btn-sm btn-show"><i class="fa fa-eye"></i></a>
+                        <a href="'.route('mosque.edit',['mosque' => $mosque->id]).'" class="btn btn-primary bg-gradient-primary btn-sm btn-edit"><i class="fa fa-edit"></i></a>
                         <a role="button" data-id="'.$mosque->id.'" class="btn btn-danger btn-sm btn-delete"><i class="fa fa-trash"></i></a>';
 
             })
@@ -74,7 +75,7 @@ class MosqueController extends Controller
         }
     }
     public function show(Mosque $mosque){
-
+        return view('frontend.mosque_show', compact('mosque'));
     }
 
     public function edit(Mosque $mosque)
