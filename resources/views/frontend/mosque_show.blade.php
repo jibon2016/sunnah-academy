@@ -7,7 +7,7 @@
                 <div class=" col-md-12">
                     <div class="d-flex">
                         <div class="card mb-3" style="width: 50%;">
-                            <img src="{{ asset($mosque->attachments->first()->file) }}" class="card-img-top" alt="...">
+                            <img style="height: 400px;" src="{{ asset($mosque->attachments->first()->file) }}" class="card-img-top" alt="...">
                         </div>
                         <div class="card mb-3" style="width: 50%;">
                             <div class="card-body">
