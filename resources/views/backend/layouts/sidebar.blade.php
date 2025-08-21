@@ -2,7 +2,7 @@
     <div class="sidebar-logo">
         <!-- Logo Header -->
         <div class="logo-header" data-background-color="dark">
-            <a href="index.html" class="logo">
+            <a href="{{ route('dashboard') }}" class="logo">
                 <img
                     src="{{ asset('backend/assets/img/kaiadmin/logo_light.svg') }}"
                     alt="navbar brand"
@@ -27,30 +27,22 @@
     <div class="sidebar-wrapper scrollbar scrollbar-inner">
         <div class="sidebar-content">
             <ul class="nav nav-secondary">
-                <li class="nav-item active">
+                <?php
+                    $subMenu = ['dashboard'];
+                ?>
+                <li class="nav-item {{ in_array(Route::currentRouteName(), $subMenu) ? 'active' : '' }}">
                     <a
-                        data-bs-toggle="collapse"
-                        href="#dashboard"
+                        href="{{ route('dashboard') }}"
                         class="collapsed"
-                        aria-expanded="false"
                     >
                         <i class="fas fa-home"></i>
                         <p>Dashboard</p>
-                        <span class="caret"></span>
                     </a>
-                    @can('admin')
-                    <div class="collapse" id="dashboard">
-                        <ul class="nav nav-collapse">
-                            <li>
-                                <a href="../demo1/index.html">
-                                    <span class="sub-item">Dashboard 1</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    @endcan
                 </li>
-                <li class="nav-item">
+                <?php
+                    $subMenu = ['mosque.index', 'mosque.edit', 'mosque.create']
+                ?>
+                <li class="nav-item {{ in_array(Route::currentRouteName(), $subMenu) ? 'active' : '' }}">
                     <a data-bs-toggle="collapse" href="#mosque">
                         <i class="fas fa-archway"></i>
                         <p>Mosques</p>

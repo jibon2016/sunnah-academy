@@ -18,6 +18,7 @@
 /public/backend
 /public/hot
 /public/storage
+/public/uploads
 /storage/*.key
 /storage/pail
 /vendor

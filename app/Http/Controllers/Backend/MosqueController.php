@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Mosque;
+use App\Traits\ImageUploadTraits;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\Facades\DataTables;
 
 class MosqueController extends Controller
 {
+    use ImageUploadTraits;
     public function index()
     {
         return view('backend.mosque.index');
@@ -28,10 +30,10 @@ class MosqueController extends Controller
 //            ->addColumn('activity_category_name', function(Mosque $activity) {
 //                return $activity->activityCategory->name ?? '';
 //            })
-//            ->addColumn('image', function(Mosque $activity) {
-//                return '<img height="100px" src="'.asset($activity->attachments->first()->file ?? '').'">';
-//            })
-            ->rawColumns(['action'])
+            ->addColumn('image', function(Mosque $mosque) {
+                return '<img height="100px" src="'.asset($mosque->attachments->first()->file ?? '').'">';
+            })
+            ->rawColumns(['action','image'])
             ->toJson();
     }
 
@@ -56,6 +58,9 @@ class MosqueController extends Controller
 
             $mosque = Mosque::create($validateData);
 
+            //image Upload
+            $this->imageUpload($request, 'uploads/attachments/mosque', $mosque);
+
             DB::commit();
             return redirect()->route('mosque.index')->with('success','Mosque created successfully.');
 
@@ -74,11 +79,40 @@ class MosqueController extends Controller
 
     public function edit(Mosque $mosque)
     {
-
+        return view('backend.mosque.edit',compact('mosque'));
     }
 
     public function update(Request $request, Mosque $mosque){
+        $validateData = $request->validate([
+            'name' => 'required|max:255',
+            'address' => 'required|max:255',
+            'google_map_url' => 'required|max:255',
+            'establist_year' => 'required|max:255',
+            'total_commitee_members' => 'nullable|digits_between:1,2',
+        ],[
+            'name.required' => 'Mosque name is required.',
+        ]);
 
+        DB::beginTransaction();
+        try {
+
+            $mosque->update($validateData);
+
+            //image Upload
+            $this->imageUpload($request, 'uploads/attachments/mosque', $mosque);
+
+            DB::commit();
+            return redirect()->route('mosque.index')->with('success','Mosque Updated successfully.');
+
+        }catch (\Exception $e){
+            DB::rollBack();
+            dd($e);
+
+            return response()->json([
+                'status'=>false,
+                'message'=>$e->getMessage(),
+            ]);
+        }
     }
 
     public function destroy(Mosque $mosque){

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\MosqueController;
+use App\Http\Controllers\CommonController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         return view('backend.dashboard');
     })->name('dashboard');
+
+    //Common
+    Route::post('attachment-delete/file', [CommonController::class, 'attachmentDelete'])->name('attachment-delete');
+    Route::post('attachment-sort/update', [CommonController::class, 'attachmentSortUpdate'])->name('attachment-sort-update');
+
 
     //All Mosque
     Route::get('datatable/mosque', [MosqueController::class, 'dataTable'])->name('mosque.datatable');

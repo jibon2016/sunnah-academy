@@ -174,7 +174,7 @@
 
 
     <!-- Events Start -->
-    <div class="container-fluid event py-5">
+    <!--<div class="container-fluid event py-5">
         <div class="container py-5">
             <h1 class="display-3 mb-5 wow fadeIn" data-wow-delay="0.1s">Upcoming <span
                     class="text-primary">Events</span></h1>
@@ -248,7 +248,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- Events End -->
 
 

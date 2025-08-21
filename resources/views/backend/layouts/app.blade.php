@@ -7,6 +7,7 @@
         content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
         name="viewport"
     />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="{{ asset('backend/assets/img/kaiadmin/favicon.ico') }}" type="image/x-icon" />
 
     <!-- Fonts and icons -->
@@ -44,7 +45,74 @@
     <!-- ColReorder CSS -->
     <link rel="stylesheet"  href="{{ asset('backend/assets/plugins/datatables-colreorder/css/colReorder.bootstrap4.min.css') }}">
 
+    <style>
+        .upload-container {
+            text-align: center;
+            padding: 20px;
+            border: 2px dashed #3498db;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
 
+        .file-upload {
+            display: none;
+        }
+
+
+        .preview-image {
+            width: 100%;
+            max-height: 100px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            object-fit: contain;
+        }
+
+        .preview-pdf {
+            width: 100%;
+            height: 100px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .file-title-input {
+            font-size: 14px;
+            margin-top: 10px;
+            width: 100%;
+            padding: 4px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 14px;
+        }
+
+        .remove-button {
+            color: #e74c3c;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .wrapper-list-item {
+            display: inline-block;
+            width: 18%;
+            margin: 1%;
+            text-align: center;
+        }
+        /* Media query for screens with a maximum width of 767 pixels (typical for mobile devices) */
+        @media only screen and (max-width: 767px) {
+            .wrapper-list-item {
+                width: 45%;
+            }
+        }
+    </style>
+    @stack('style')
 </head>
 <body>
     <div class="wrapper">
@@ -304,6 +372,13 @@
     <script src="{{ asset('backend/assets/plugins/datatables-colreorder/js/dataTables.colReorder.min.js') }}"></script>
 
     <script>
+        $(function (){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+        });
     $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
         type: "line",
         height: "70",

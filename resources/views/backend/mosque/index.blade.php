@@ -49,11 +49,12 @@
                                 >
                                     <thead>
                                     <tr>
+                                        <th>ID</th>
                                         <th>Name</th>
                                         <th>Addres</th>
-                                        <th>Google Map Url</th>
                                         <th>Establisted</th>
                                         <th>Member</th>
+                                        <th>image</th>
                                         <th style="width: 10%">Action</th>
                                     </tr>
                                     </thead>
@@ -79,11 +80,11 @@
                 "pagingType": "full_numbers",
                 "lengthMenu": [[10, 25, 50, -1],[10, 25, 50, "All"]
                 ],
+                // columnDefs: [{ width: '40%', targets: 3 }],
                 columns: [
                     {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
                     {data: 'name', name: 'name'},
                     {data: 'address', name: 'address'},
-                    {data: 'google_map_url', name: 'google_map_url'},
                     {data: 'establist_year', name: 'establist_year'},
                     {data: 'total_commitee_members', name: 'total_commitee_members'},
                     // {
@@ -98,7 +99,7 @@
                     //         return data;
                     //     }
                     // },
-                    // {data: 'image', name: 'image'},
+                    {data: 'image', name: 'image'},
                     {data: 'action', name: 'action', orderable: false},
                 ],
                 "dom": 'lBfrtip',
