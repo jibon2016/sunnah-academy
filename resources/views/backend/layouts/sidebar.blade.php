@@ -2,14 +2,17 @@
     <div class="sidebar-logo">
         <!-- Logo Header -->
         <div class="logo-header" data-background-color="dark">
-            <a href="{{ route('dashboard') }}" class="logo">
-                <img
-                    src="{{ asset('backend/assets/img/kaiadmin/logo_light.svg') }}"
-                    alt="navbar brand"
-                    class="navbar-brand"
-                    height="20"
-                />
+            <a href="{{ route('dashboard') }}" class="navbar-brand">
+                <h3 class="mb-0 text-2xl font-bold">Sunnah <span style="color: #f1c152;"> Academy</span> </h3>
             </a>
+{{--            <a href="{{ route('dashboard') }}" class="logo">--}}
+{{--                <img--}}
+{{--                    src="{{ asset('backend/assets/img/kaiadmin/logo_light.svg') }}"--}}
+{{--                    alt="navbar brand"--}}
+{{--                    class="navbar-brand"--}}
+{{--                    height="20"--}}
+{{--                />--}}
+{{--            </a>--}}
             <div class="nav-toggle">
                 <button class="btn btn-toggle toggle-sidebar">
                     <i class="gg-menu-right"></i>

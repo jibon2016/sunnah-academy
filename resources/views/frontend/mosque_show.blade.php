@@ -5,11 +5,11 @@
         <div class="container py-5">
             <div class="row py-5">
                 <div class=" col-md-12">
-                    <div class="d-flex">
-                        <div class="card mb-3" style="width: 50%;">
-                            <img style="height: 400px;" src="{{ asset($mosque->attachments->first()->file) }}" class="card-img-top" alt="...">
+                    <div class="d-md-flex w-full">
+                        <div class="card mb-3 col-md-6" >
+                            <img style="height: 350px;" src="{{ asset($mosque->attachments->first()->file) }}" class="card-img-top" alt="...">
                         </div>
-                        <div class="card mb-3" style="width: 50%;">
+                        <div class="card mb-3 col-md-6">
                             <div class="card-body">
                                 <h3 style="color:#12233d" class="card-title py-3 px-2">{{ $mosque->name }}</h3>
                                 <div class="fs-6">
